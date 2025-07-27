@@ -1,0 +1,22 @@
+﻿<div style="text-align: center; margin: 50px;">
+    <h1>@ViewBag.Welcome</h1>
+    <p>@ViewBag.WelcomeMessage</p>
+
+    <hr />
+
+    <p><strong>Tenant:</strong> @ViewBag.TenantName</p>
+    <p><strong>Culture:</strong> @ViewBag.Culture</p>
+
+    <div style="margin-top: 30px;">
+        <button onclick="setCulture('tr')" style="padding: 10px;">🇹🇷 Türkçe</button>
+        <button onclick="setCulture('en')" style="padding: 10px;">🇺🇸 English</button>
+    </div>
+</div>
+
+<script>
+    async function setCulture(culture) {
+        const resp = await fetch(`/test/culture/${culture}`, {method: 'POST'});
+        const result = await resp.json();
+        location.reload(); // Sayfayı yenile
+    }
+</script>

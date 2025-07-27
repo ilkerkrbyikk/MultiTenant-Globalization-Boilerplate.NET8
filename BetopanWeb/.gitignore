@@ -1,0 +1,35 @@
+﻿# Build klasörleri
+bin/
+obj/
+out/
+
+# Rider & VS Code & VS
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vs/
+
+# Logs ve DB
+*.log
+*.sqlite
+*.db
+
+# Environment files
+.env
+.env.*
+
+# Publish çıktıları
+wwwroot/
+publish/
+dist/
+node_modules/
+
+# OS bazlı
+Thumbs.db
+.DS_Store
+
+# local appsettings (prod değil)
+appsettings.Development.
